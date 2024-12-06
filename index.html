@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&familmy=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="crossorigin="anonymous"referrerpolicy="no-referrer"/>
+    <script src="https://kit.fontawesome.com/dcefce9aca.js" crossorigin="anonymous"></script>
+    <title>JKN Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Poppins';
+            background-color: white ;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-content img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .main-content-1 h1{
+          font-size: 50px;
+        }
+
+        .main-content-3 {
+            display: flex;
+        }
+
+        .button{
+          font-family: Poppins;
+          text-decoration: none;
+          margin-top: 30px;
+          padding: 20px 40px;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          text-transform: uppercase;
+          margin-right: 30px; 
+          font-weight: bold ;
+        }
+
+        .button-android{
+          background-color: #65bec2;
+          color: white;
+          transition: 0.3s ease;
+        }
+
+        .button-iphone{
+          background-color: transparent;
+          color: #65bec2;
+          border: 2px solid #65bec2;
+        }
+
+        h1 {
+          padding-top: 50px;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        h2{
+          text-align: center;
+        }
+
+        h3{
+          text-align: center;
+        }
+
+        #satu{
+          font-size: 50px;
+          padding-top: 50px;
+        }
+
+        #dua-1{
+          padding-bottom: 40px;
+          font-size: 52px;
+        }
+
+        #dua-2{
+          font-size: 30px;
+        }
+
+        #dua-3{
+          font-size: 50px;
+        }
+
+        #satu-kata{
+          padding-bottom: 60px;
+          font-size: 40px;
+        }
+
+        .baru-3 a{
+          color:#65bec2 ;
+          text-decoration: none;
+        }
+
+        .baru-4{
+          padding-top: 60px;
+        }
+        
+        .baru-4 a{
+          color: #65bec2;
+          text-decoration: none;
+        }
+
+        .baru-6{
+          padding-top: 60px;
+        }
+
+        .kata-2{
+          font-size: 20px;
+          text-align: center;
+          padding-bottom: 78px;
+        }
+
+        .baru-6 a{
+          color: #65bec2;
+          text-decoration: none;
+        }
+
+        .kata-10 a{
+          text-decoration: none;
+          color: #65bec2;
+        }
+
+        .third-content h2{
+          padding-top: 30px;
+        }
+
+        .kata-11{
+          padding-bottom: 80px;
+        }
+
+        .main-content img{
+          width: 170px;
+        }
+
+        .main-content-1 {
+          font-size: 60px;  
+        }
+
+        .main-content-2 {
+          font-size: 30px;
+        }
+
+        .second-content h1{
+          font-size: 40px;
+        }
+
+        .third-content{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          max-width: 1100px;
+          font-size: 20px;
+          text-align: justify;
+          line-height: 1.9;
+        }
+
+        .forth-content{
+          padding-top: 80px;
+          padding-bottom: 80px;
+          background-color: #eff4f7;
+        }
+
+        .forth-content img{
+          display: flex;
+          margin: 0 auto;
+          max-width: 1100px;
+          justify-content: center;
+        }
+
+        /* Grid Section */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .second-content{
+          grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+          width: 100%;
+          background-color: #eff4f7;
+          padding-bottom: 30px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 60px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+          display: block;
+          margin: 0 auto 20px auto;
+          height: auto;
+          width: 80px;
+          margin-bottom: 15px;
+        }
+
+        .card h2 {
+            color: #566d8f;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1em;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .card button {
+            background-color: transparent;
+            border: 2px solid #00cccc;
+            color: #00cccc;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #00cccc;
+            color: white;
+        }
+
+        .lebih-baru-1 {
+        padding-top: 60px;
+        font-size: 20px;
+        text-align: justify;
+        margin: 0 auto;
+        max-width: 1100px;
+        line-height: 1.9;
+        padding-bottom: 60px;
+      }
+
+        .lebih-baru-1 b {
+        font-size: 20px;
+        text-align: left;
+        margin: 10px 0;
+      }
+
+      .fiveth-content {
+        font-size: 20px;
+        margin: 0 auto;
+        max-width: 1100px;
+        line-height: 1.9;
+        padding-bottom: 60px;
+      }
+
+      .fiveth-content b{
+        font-size: 20px;
+        text-align: left;
+        margin: 10px 0;
+      }
+
+
+      .social-icons {
+        grid-row: 1;
+        display: flex;
+        gap: 10px;
+        padding-right: 20px;
+      }
+
+      .social-icons a svg {
+        width: 20px;
+        height: 32px;
+        fill: #00cccc;
+        transition: fill 0.3s ease;
+      }
+
+      .social-icons a:hover svg {
+        fill: #fff;
+      }
+
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="address.html">Address</a>
+    </div>
+</header>
+<div class="seluruhnya">
+  <section class="main-content">
+    <img src="logo jkn.png" alt="JKN Mobile Logo">
+    <div class="main-content-1">
+      APLIKASI JKN MOBILE
+      <br>
+    </div>
+
+    <div class="main-content-2">
+      Akses Kesehatan Anda dengan Mudah dan Cepat.
+      <br>
+      Unduh JKN Mobile sekarang juga, pilih aplikasi
+      <br>
+      sesuai tipe handphone Anda
+      <br>
+    </div>
+
+    <div class="main-content-3">
+      <a href="#" class="button button-android">Android</a>
+      <a href="#" class="button button-iphone">Iphone</a>
+    </div>
+
+</section>
+
+<section class="second-content">
+    <h1>APLIKASI BPJS KESEHATAN</h1>
+    <div class="grid-container">
+        <div class="card">
+            <img src="bpjs.png" alt="BPJS Kesehatan">
+            <h2>BPJS Kesehatan</h2>
+            <p>Portal Informasi Data BPJS Kesehatan</p>
+            <button>Login</button>
+        </div>
+        
+        <div class="card">
+            <img src="bpjs.png" alt="E Claim BPJS">
+            <h2>E Claim BPJS</h2>
+            <p>Aplikasi untuk klaim BPJS Kesehatan secara online</p>
+            <button>Login</button>
+        </div>
+        
+        <div class="card">
+            <img src="bpjs.png" alt="V Claim BPJS">
+            <h2>V Claim BPJS</h2>
+            <p>Aplikasi untuk membuat SEP oleh Rumah Sakit</p>
+            <button>Login</button>
+        </div>
+        
+        <div class="card">
+            <img src="bpjs.png" alt="P Care BPJS">
+            <h2>P Care BPJS</h2>
+            <p>Aplikasi untuk klaim Primary Care BPJS Kesehatan</p>
+            <button>Login</button>
+        </div>
+        
+        <div class="card">
+            <img src="bpjs.png" alt="HFIS BPJS">
+            <h2>HFIS BPJS</h2>
+            <p>Sistem Informasi Manajemen Data Fasilitas Kesehatan BPJS Kesehatan</p>
+            <button>Login</button>
+        </div>
+        
+        <div class="card">
+            <img src="bpjs.png" alt="Skrinning BPJS">
+            <h2>Skrinning BPJS</h2>
+            <p>Aplikasi Web Skrining Riwayat Kesehatan Peserta BPJS Kesehatan</p>
+            <button>Login</button>
+        </div>
+        
+        <div class="card">
+            <img src="bpjs.png" alt="SIPP BPJS">
+            <h2>SIPP BPJS</h2>
+            <p>Aplikasi Saluran Informasi Penanganan Pengaduan BPJS Kesehatan</p>
+            <button>Login</button>
+        </div>
+        
+        <div class="card">
+            <img src="bpjs.png" alt="Antrian Faskes">
+            <h2>Antrian Faskes</h2>
+            <p>Aplikasi untuk mendaftar antrian Faskes BPJS secara online</p>
+            <button>Login</button>
+        </div>
+        
+        <div class="card">
+            <img src="bpjs.png" alt="Antrian RS">
+            <h2>Antrian RS</h2>
+            <p>Aplikasi untuk mendaftar antrian RS BPJS Kesehatan secara online</p>
+            <button>Login</button>
+        </div>
+    </div>
+</section>
+
+<section class="third-content">
+  <div class="kotak-2">
+    <h2 class="paragraf-awal" id="satu">
+      JKN MOBILE
+      <br>
+    </h2>
+
+    <div class="kata-2">
+      Solusi Kesehatan Digital di Ujung Jari Anda
+      <br>
+    </div>
+
+    <div class="kata-3">
+      Dalam era digital ini, hampir semua aspek kehidupan kita telah dipermudah dengan adanya teknologi. Termasuk dalam hal akses informasi dan layanan kesehatan. Salah satu inovasi dalam bidang ini adalah aplikasi JKN Mobile dari BPJS Kesehatan.
+      <br>
+    </div>
+
+    <h2 class="paragraf-awal" id="dua">
+      Apa Itu JKN Mobile?
+      <br>
+    </h2>
+
+    <div class="kata-4">
+      <b>JKN Mobile</b>
+      "adalah aplikasi mobile yang dikembangkan oleh BPJS Kesehatan untuk memudahkan peserta dalam mengakses berbagai layanan kesehatannya. Dengan aplikasi ini, peserta dapat melakukan cek status kepesertaan, mencari rumah sakit terdekat, hingga melakukan pendaftaran online."
+      <br>
+    </div>
+
+    <h2 class="paragraf-awal" id="tiga">
+      Sejarah JKN Mobile
+      <br>
+    </h2>
+
+    <div class="kata-5">
+      JKN Mobile adalah aplikasi mobile yang diluncurkan oleh Badan Penyelenggara Jaminan Sosial (BPJS) Kesehatan Indonesia. Aplikasi ini merupakan bagian dari inisiatif BPJS Kesehatan untuk memperluas akses dan meningkatkan kualitas layanan kepada peserta Jaminan Kesehatan Nasional (JKN).
+      <br>
+      <br>
+      Peluncuran JKN Mobile menandai titik penting dalam sejarah layanan kesehatan di Indonesia, dengan tujuan utama untuk mengoptimalkan pelayanan dan mempermudah proses administratif bagi peserta. Sejak diluncurkan, aplikasi ini telah mendapatkan respon positif dari masyarakat dan terus berkembang dengan penambahan fitur-fitur baru untuk memenuhi kebutuhan peserta.
+      <br>
+    </div>
+
+    <h2 class="paragraf-awal" id="tiga">
+      VISI dan MISI JKN Mobile
+      <br>
+    </h2>
+    
+    <div class="kata-6">
+      <b>VISI dan MISI JKN Mobile</b>
+      <br>
+      Visi dari JKN Mobile adalah menjadi platform digital utama dalam menyediakan akses informasi dan layanan kesehatan bagi seluruh peserta BPJS Kesehatan. Dengan teknologi digital, diharapkan mampu memberikan pelayanan yang lebih cepat, mudah, dan efisien.
+      <br>
+      <br>
+      <b>Misi JKN Mobile</b>
+      <br>
+      Memfasilitasi akses informasi tentang program jaminan kesehatannya kepada semua peserta secara real-time.
+      <br>
+      Meningkatkan efisiensi proses administratif melalui sistem online, seperti pengajuan klaim, pembayaran iuran, sampai pencarian fasilitas kesehatannya.
+      <br>
+      Menyediakan saluran komunikasi yang efektif antara peserta dengan BPJS Kesehatan.
+      <br>
+      Melalui visi dan misinya tersebut, JKN Mobile berkomitmen untuk membantu transformasi digital dalam sektor kesehatan di Indonesia. Dengan demikian dapat menciptakan sistem jaminan kesehatannya yang lebih inklusif dan berkelanjutan bagi seluruh masyarakat.
+    </div>
+
+    <div class="kata-7">
+      Melalui visi dan misinya tersebut, JKN Mobile berkomitmen untuk membantu transformasi digital dalam sektor kesehatan di Indonesia. Dengan demikian dapat menciptakan sistem jaminan kesehatannya yang lebih inklusif dan berkelanjutan bagi seluruh masyarakat.
+    </div>
+
+    <h2 class="paragraf-awal" id="empat">
+      Fitur Unggulan Aplikasi JKN Mobile
+      <br>
+    </h2>
+
+    <div class="kata-8">
+      <b>Aplikasi JKN Mobile</b>
+      menawarkan berbagai fitur yang dirancang untuk memudahkan pengguna:
+      <br>
+      Cek Status Kepesertaan: Peserta dapat memeriksa status kepesertaannya langsung dari aplikasi.
+      <br>
+      Pencarian Rumah Sakit: Fitur pencarian rumah sakit membantu peserta menemukan fasilitas kesehatan terdekat.
+      <br>
+      Pendaftaran Online: Peserta dapat mendaftar secara online untuk mendapatkan layanan kesehatannya.
+      <br>
+    </div>
+
+    <h2 class="paragraf-awal" id="lima">
+      Keuntungan Menggunakan Aplikasi JKN Mobile
+      <br>
+    </h2>
+
+    <div class="kata-9">
+      Menggunakan aplikasi mobile untuk akses layanan kesehatan tentunya memberikan banyak kemudahan. Beberapa keuntungan menggunakan aplikasi
+      <b>JKN Mobile</b>
+      antara lain:
+      <br>
+      <br>
+      <b>Kemudahan Akses</b>
+      <br>
+      Dengan smartphone di tangan, Anda bisa mengakses berbagai informasi dan layanan kapan saja dan di mana saja.
+      <br>
+      <br>
+      <b>Efisiensi Waktu</b>
+      <br>
+      Tidak perlu lagi antri panjang atau datang langsung ke kantor BPJS atau rumah sakit hanya untuk cek status atau mendaftar layanan.
+      <br>
+      <br>
+      <b>Informasi Real-Time</b>
+      <br>
+      Semua data di aplikasi selalu diperbarui secara real-time sehingga Anda selalu mendapatkan informasi terkini.
+    </div>
+
+    <h2 class="paragraf-awal" id="enam">
+      Bagaimana Cara Mengunduh dan Menggunakan Aplikasinya?
+      <br>
+    </h2>
+
+    <div class="kata-10">
+      Anda bisa mengunduh aplikasinya secara gratis dari Google Play Store atau Apple App Store. Setelah itu, cukup daftarkan diri Anda dan ikuti petunjuk yang ada di dalamnya untuk mulai menggunakan semua fiturnya
+      <br>
+      <br>
+      <a href="https://jknmobile.com/#cara_download">Baca Selengkapnya...</a>
+      <br>
+    </div>
+
+    <h2 class="paragraf-awal" id="tujuh">
+      Kesimpulan
+      <br>
+    </h2>
+
+    <div class="kata-11">
+      JKN Mobile adalah solusi praktis bagi Anda yang ingin mengakses informasi dan layanan kesehatan dari BPJS Kesehatan dengan cepat dan mudah. Dengan menggunakan aplikasi ini, Anda bisa menghemat waktu, tenaga, dan mendapatkan informasi terkini. Jadi, tunggu apa lagi? Yuk, unduh JKN Mobile dan mulailah menikmati layanan kesehatan yang lebih baik dan efisien!
+    </div>
+  </div>
+</section>
+
+<section class="forth-content">
+  <div class="baru" id="gambar-1">
+    <h2 class="paragraf-tengah" id="satu-kata">
+      Info Grafis Aplikasi JKN Mobile
+      <br>
+    </h2>
+  </div>
+
+  <img src="https://jknmobile.com/wp-content/uploads/2023/09/Infografis_Aplikasi_JKN_Mobile.webp" alt="Infor Grafis Aplikasi JKN Mobile">
+</section>
+
+<section class="fiveth-content">
+  <h2 class="paragraf-tengah" id="dua-1">
+    UNDUH APLIKASI JKN MOBILE
+    <br>
+  </h2>
+  <div class="baru-2" id="text-baru">
+    Dalam era digital ini, akses ke layanan kesehatan semakin mudah berkat adanya aplikasi JKN Mobile. Baik Anda pengguna Android atau iPhone, aplikasi ini dapat dengan mudah diunduh dan digunakan. Berikut adalah panduan lengkap untuk mengunduh dan menggunakan aplikasi JKN Mobile.
+  </div>
+  <h3 class="teks-baru" id="satu">
+    Cara Mengunduh Aplikasi JKN Mobile Untuk Pengguna Android
+    <br>
+  </h3>
+
+  <div class="baru-3">
+    Jika Anda adalah pengguna Android dan ingin menggunakan aplikasi ini, berikut adalah panduan lengkap cara men-download dan menginstal Aplikasi JKN Mobile Bagi Pengguna Android.
+    <br>
+    <br>
+    <b>Unduh Aplikasi JKN Mobile Android</b>
+    <br>
+    <br>
+    Sebagai pengguna handphone Android, Anda dapat men-download aplikasi JKN Mobile secara langsung melalui tombol download di bawah ini, dan lanjutkan ke petunjuk Instalasi
+    <br>
+    <br>
+    <a href="https://prosoftpedia.com/download-aplikasi-jkn-mobile/">Download</a>
+    <br>
+  </div>
+
+  <div class="baru-4">
+    <b>Membuka Google Play Store</b>
+    <br>
+    <br>
+    Selain cara di atas, Anda juga bisa menemukan aplikasi JKN Mobile di Google Play Store. Ikon Google Play Store biasanya berada di layar utama atau di folder aplikasi ponsel Android Anda. Klik ikon tersebut untuk membuka Google Play Store.
+    <br>
+    <br>
+    <b>Mencari Aplikasi JKN Mobile</b>
+    <br>
+    <br>
+    Setelah masuk ke Google Play Store, Anda akan melihat kolom pencarian di bagian atas. Ketikkan "JKN Mobile" di kolom tersebut, lalu tekan tombol 'Enter' atau 'Search'.
+    <br>
+    <br>
+    <b>Mengunduh Aplikasi di Google Play Store</b>
+    <br>
+    <br>
+    Setelah hasil pencarian muncul, klik pada aplikasi yang dikembangkan oleh 'BPJS Kesehatan'. Anda akan melihat halaman detail aplikasi. Di halaman ini, klik tombol 'Install' atau 'Pasang' untuk mengunduh dan menginstal aplikasi.
+    <br>
+    <br>
+    <b>Menunggu Instalasi</b>
+    <br>
+    <br>
+    Setelah Anda menekan tombol 'Install', unduhan akan dimulai. Anda bisa melihat proses unduhan di bagian notifikasi ponsel. Proses ini mungkin memerlukan waktu beberapa menit, tergantung pada koneksi internet Anda.
+    <br>
+    <br>
+    <b>Membuka Aplikasi</b>
+    <br>
+    <br>
+    Setelah aplikasi berhasil terinstal, tombol 'Install' akan berubah menjadi 'Open' atau 'Buka'. Anda bisa klik tombol tersebut untuk membuka aplikasi JKN Mobile. Alternatif lainnya, Anda juga bisa menemukan dan membuka aplikasi tersebut di layar utama atau dalam folder aplikasi ponsel Anda.
+    <br>
+    <br>
+    <b>Registrasi / Masuk</b>
+    <br>
+    <br>
+    Setelah aplikasi terbuka, Anda akan diminta untuk mendaftar atau masuk. Jika Anda sudah terdaftar sebagai peserta BPJS Kesehatan, masukkan Nomor Kartu BPJS Kesehatan atau NIK dan kata sandi Anda. Jika Anda belum terdaftar, silahkan klik link di bawah dan ikuti petunjuknya.
+    <br>
+    <a href="https://jknmobile.com/#cara_registrasi">Cara Daftar Aplikasi JKN Mobile</a>
+    <br>
+    <br>
+    <b>Menggunakan Aplikasi</b>
+    <br>
+    <br>
+    Setelah berhasil masuk, sekarang Anda bisa mulai menggunakan aplikasi JKN Mobile untuk memeriksa saldo, mengecek antrian, dan lainnya.
+    <br>
+    <br>
+    Itulah panduan lengkap cara men-download dan menginstal Aplikasi JKN Mobile untuk pengguna Android. Semoga panduan ini bisa membantu Anda. Selamat mencoba!
+    <br>
+
+    <h3 class="teks-baru" id="dua-2">
+      Cara Mengunduh Aplikasi JKN Mobile Untuk Pengguna iPhone
+      <br>
+    </h3>
+
+    <div class="baru-5">
+      Jika Anda pengguna iPhone, berikut panduan lengkap untuk mengunduh dan menggunakan Aplikasi JKN Mobile di iPhone
+      <br>
+      <br>
+      <b>Unduh Aplikasi JKN Mobile iPhone</b>
+      <br>
+      <br>
+      Bila Anda pengguna handphone iPhone, aplikasi JKN Mobile dapat Anda unduh secara langsung melalui tombol di bawah ini, lalu Anda bisa lanjutkan ke petunjuk Instalasi
+      <br>
+      <a href="https://prosoftpedia.com/download-aplikasi-jkn-mobile/">Download</a>
+      <br>
+    </div>
+
+    <div class="baru-6">
+      <b>Membuka App Store</b>
+      <br>
+      <br>
+      Aplikasi JKN Mobile juga bisa Anda temukan di Apple App Store. Ikon App Store biasanya berada di layar utama iPhone Anda. Klik ikon tersebut untuk membuka App Store.
+      <br>
+      <br>
+      <b>Mencari Aplikasi JKN Mobile</b>
+      <br>
+      <br>
+      Setelah masuk ke App Store, Anda akan melihat kolom pencarian di bagian bawah. Ketikkan "JKN Mobile" di kolom tersebut, lalu tekan tombol 'Search' atau 'Cari'.
+      <br>
+      <br>
+      <b>Mengunduh Aplikasi di App Store</b>
+      <br>
+      <br>
+      Setelah hasil pencarian muncul, klik pada aplikasi yang dikembangkan oleh 'BPJS Kesehatan'. Anda akan melihat halaman detail aplikasi. Di halaman ini, klik tombol 'Get' atau 'Unduh' untuk mengunduh dan menginstal aplikasi.
+      <br>
+      <br>
+      <b>Menunggu Instalasi</b>
+      <br>
+      <br>
+      Setelah Anda menekan tombol 'Get', unduhan akan dimulai. Proses ini mungkin memerlukan waktu beberapa menit, tergantung pada koneksi internet Anda.
+      <br>
+      <br>
+      <b>Membuka Aplikasi</b>
+      <br>
+      <br>
+      Setelah aplikasi berhasil terinstal, ikonnya akan muncul di layar utama iPhone Anda. Klik ikon tersebut untuk membuka aplikasi JKN Mobile.
+      <br>
+      <br>
+      <b>Registrasi / Masuk</b>
+      <br>
+      <br>
+      Setelah aplikasi terbuka, Anda akan diminta untuk mendaftar atau masuk. Jika Anda sudah terdaftar sebagai peserta BPJS Kesehatan, masukkan Nomor Kartu BPJS Kesehatan atau NIK dan kata sandi Anda. Jika Anda belum terdaftar, ikuti petunjuk di bawah ini.
+      <br>
+      <a href="https://jknmobile.com/#cara_registrasi">Cara daftar Aplikasi JKN Mobile</a>
+      <br>
+      <br>
+      <b>Menggunakan Aplikasi</b>
+      <br>
+      <br>
+      Setelah berhasil masuk, sekarang Anda bisa mulai menggunakan aplikasi JKN Mobile untuk memeriksa saldo, mengecek antrian dan lainnya.
+      <br>
+      <br>
+      Semoga panduan ini dapat membantu Anda dalam menggunakan Aplikasi JKN Mobile di perangkat Iphone! Selamat mencoba!
+    </div>
+
+  </div>  
+</section>
+
+<section class="sixth-content">
+  <div class="lebih-baru">
+    <h2 class="text-baru" id="dua-3">
+      CARA REGISTRASI JKN MOBILE
+      <br>
+    </h2>
+  </div>
+
+  <div class="lebih-baru-1">
+    Berikut adalah panduan lengkap langkah demi langkah untuk melakukan registrasi di aplikasi JKN Mobile. Setelah anda berhasil mengunduh dan meng-instal Aplikasi JKN Mobile dari BPJS Kesehatan, lanjutkan dengan langkah berikut
+    <br>
+    <br>
+    <b>Membuka Aplikasi dan Memulai Registrasi</b>
+    <br>
+    <br>
+    Setelah instalasi selesai, buka aplikasi JKN Mobile.
+    <br>
+    Di halaman utama, klik tombol "Daftar" yang biasanya berada di bagian bawah layar.
+    <br>
+    <br>
+    <b>Mengisi Formulir Pendaftaran</b>
+    <br>
+    <br>
+    Anda akan diminta untuk mengisi formulir pendaftaran dengan informasi pribadi seperti nama lengkap, nomor Kartu Tanda Penduduk (KTP), alamat email, nomor telepon.
+    <br>
+    Buat kata sandi yang kuat dan aman sebagai proteksi akun Anda nanti.
+    <br>
+    Pastikan semua informasi yang dimasukkan sudah benar sebelum melanjutkan ke langkah berikutnya.
+    <br>
+    <br>
+    <b>Menerima Kode Verifikasi</b>
+    <br>
+    <br>
+    Setelah menekan tombol "Daftar", sistem akan mengirimkan kode verifikasi ke alamat email atau nomor telepon yang telah Anda masukkan sebelumnya.
+    <br>
+    Buka email atau pesan SMS tersebut, catat kode verifikasi yang diberikan.
+    <br>
+    <br>
+    <b>Memasukkan Kode Verifikasi</b>
+    <br>
+    <br>
+    Kembali ke aplikasi JKN Mobile, masukkan kode verifikasi tersebut pada kolom yang disediakan.
+    <br>
+    Tekan tombol "Verifikasi" untuk melanjutkan proses pendaftaran.
+    <br>
+    Setelah berhasil melakukan verifikasi, proses registrasinya sudah selesai! Selanjutnya anda bisa langsung login menggunakan akun baru anda itu untuk mulai menggunakan layanan-layanan dalam apliksi ini .
+    <br>
+    <br>
+    Ingatlah selalu untuk menjaga kerahasiaan data-data pribadi anda termasuk username dengan password aplikasi ini .
+    <br>
+
+  </div>
+</section>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-left">
+    Disclaimer:
+    <br>
+    Kami hanya menyediakan informasi seputar Aplikasi JKN Mobile.
+    <br>
+    JKNMobile bukanlah official website.
+  </div>
+  
+  <div class="footer-right">
+    <ul class="social-icons">
+      <li><a href="#"><i style="padding: 10px 13px; color: #fff; background-color: #00cccc; " class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="#"><i style="padding: 10px; color: #fff; background-color: #00cccc;" class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="#"><i style="padding: 10px; color: #fff; background-color: #00cccc;" class="fa-brands fa-x-twitter"></i></a></li>      
+      <li><a href="#"><i style="padding: 10px; color: #fff; background-color: #00cccc;" class="fa-brands fa-youtube"></i></a></li> 
+    </ul>
+    <div class="unai">
+      <ul class="unai-link">
+        <li><a href="https://fti.unai.edu/" target="_blank">FTI UNAI</a></li>
+        <li><a href="https://unai.edu/" target="_blank">UNAI</a></li>
+        <li><a href="https://jurnal.unai.edu/index.php/teika" target="_blank">Jurnal TEIKA</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <a href="https://jknmobile.com" class="footer-linked">JKNMOBILE.COM</a>
+  </div>
+</footer>
+
+</body>
+</html>
