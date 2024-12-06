@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dcefce9aca.js" crossorigin="anonymous"></script>
+    <title>Biodata</title>
+</head>
+
+<body>
+    <header>
+        <div class="bg-gray-200 p-4">
+            <!-- Container for the navigation bar -->
+            <div class="flex justify-between items-center">        
+                <!-- Hamburger Icon for Mobile -->
+                <div class="lg:hidden">
+                    <button id="menu-toggle" class="text-blue-600">
+                        <i class="fas fa-bars bg"></i> <!-- Hamburger Icon -->
+                    </button>
+                </div>
+    
+                <!-- Navigation Links (Desktop) -->
+                <ul class="hidden lg:flex justify-center gap-10 w-full max-w-6xl mx-auto">
+                    <li><a href="index.html" class="text-blue-600">Home</a></li>
+                    <li><a href="biodata.html" class="text-blue-600">Biodata</a></li>
+                    <li><a href="contact_us.html" class="text-blue-600">Contact Us</a></li>
+                    <li><a href="address.html" class="text-blue-600">Address</a></li>
+                </ul>
+            </div>
+    
+            <!-- Mobile Navigation Links (Initially Hidden) -->
+            <ul id="mobile-menu" class="lg:hidden hidden flex-col items-center mt-4 space-y-4 bg-gray-200 w-full">
+                <li><a href="index.html" class="text-blue-600">Home</a></li>
+                <li><a href="biodata.html" class="text-blue-600">Biodata</a></li>
+                <li><a href="contact_us.html" class="text-blue-600">Contact Us</a></li>
+                <li><a href="address.html" class="text-blue-600">Address</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <footer class="bg-[#566d8f] p-8 text-white">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto max-w-[1048px] sm:text-left">
+            <div>
+                <p class="italic">Disclaimer: <br> Kami hanya menyediakan informasi seputar Aplikasi JKN Mobile.</p>
+                <p class="italic">JKNMobile bukanlah official website.</p>
+            </div>
+            <div class="flex flex-col items-center sm:items-end space-y-4">
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="#" class="px-4 py-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="flex space-x-6 pt-10">
+                    <li>
+                        <a href="https://fti.unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            FTI UNAI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            UNAI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://jurnal.unai.edu/index.php/teika" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            Jurnal TEIKA
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-400 my-6 w-3/5 mx-auto"></div>
+        <div class="text-center mt-4">
+            <a href="https://jknmobile.com" class="text-teal-500 font-semibold hover:text-teal-600">
+                JKNMOBILE.COM
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to toggle the visibility of the mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Toggle mobile menu visibility
+        });
+    </script>
+</body>
+</html>
