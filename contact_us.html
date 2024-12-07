@@ -208,6 +208,13 @@
         input.addEventListener("focus", () => input.classList.add("ring-2", "ring-blue-400"));
         input.addEventListener("blur", () => input.classList.remove("ring-2", "ring-blue-400"));
         });
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
