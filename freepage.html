@@ -15,26 +15,26 @@
         <div class="bg-gray-200 p-4">
             <div class="flex justify-between items-center">        
                 <div class="lg:hidden">
-                    <button id="menu-toggle" class="text-blue-600">
-                        <i class="fas fa-bars bg"></i>
+                    <button id="menu-toggle" class="text-black">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
     
                 <ul class="hidden lg:flex justify-center gap-10 w-full max-w-6xl mx-auto">
-                    <li><a href="index.html" class="text-blue-600">Home</a></li>
-                    <li><a href="biodata.html" class="text-blue-600">Biodata</a></li>
-                    <li><a href="contact_us.html" class="text-blue-600">Contact Us</a></li>
-                    <li><a href="posts.html" class="text-blue-600">Post</a></li>
-                    <li><a href="freepage.html" class="text-blue-600">Resource</a></li>
+                    <li><a href="index.html" class="text-black hover:text-blue-600 transition duration-300">Home</a></li>
+                    <li><a href="biodata.html" class="text-black hover:text-blue-600 transition duration-300">Biodata</a></li>
+                    <li><a href="contact_us.html" class="text-black hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                    <li><a href="posts.html" class="text-black hover:text-blue-600 transition duration-300">Post</a></li>
+                    <li><a href="freepage.html" class="text-black hover:text-blue-600 transition duration-300">Resource</a></li>
                 </ul>
             </div>
     
             <ul id="mobile-menu" class="lg:hidden hidden flex-col items-center mt-4 space-y-4 bg-gray-200 w-full">
-                <li><a href="index.html" class="text-blue-600">Home</a></li>
-                <li><a href="biodata.html" class="text-blue-600">Biodata</a></li>
-                <li><a href="contact_us.html" class="text-blue-600">Contact Us</a></li>
-                <li><a href="posts.html" class="text-blue-600">Post</a></li>
-                <li><a href="freepage.html" class="text-blue-600">Resource</a></li>
+                <li><a href="index.html" class="text-black hover:text-blue-600 transition duration-300">Home</a></li>
+                <li><a href="biodata.html" class="text-black hover:text-blue-600 transition duration-300">Biodata</a></li>
+                <li><a href="contact_us.html" class="text-black hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                <li><a href="posts.html" class="text-black hover:text-blue-600 transition duration-300">Post</a></li>
+                <li><a href="freepage.html" class="text-black hover:text-blue-600 transition duration-300">Resource</a></li>
             </ul>
         </div>
     </header>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                        <a href="sun_moon.html"><img src="img/web icon.jpg" alt="Project 2" class="w-full h-60 object-cover"></a>
+                        <a href="sun_moon.html"><img src="img/sky.jpeg" alt="Project 2" class="w-full h-60 object-cover"></a>
                         <div class="p-4">
                             <h3 class="text-xl font-bold text-gray-700">Project 2</h3>
                             <p class="text-gray-600">Description of project 2.</p>
@@ -148,5 +148,14 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
