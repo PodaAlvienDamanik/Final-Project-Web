@@ -37,13 +37,13 @@
         </div>
     </header>
 
-    <main class="flex-grow flex items-center justify-center">
-        <div class="mx-auto p-4">
-            <h1 class="text-3xl font-bold text-center mb-6">Post Data Viewer</h1>
-            <div id="postContainer" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <main class="flex-grow flex items-center justify-center bg-gray-100">
+        <div class="mx-auto p-4 max-w-2xl bg-white rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-center mb-6">Post Data</h1>
+            <div id="postContainer" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1"></div>
         </div>
     </main>
-
+    
     <footer class="bg-[#566d8f] p-8 text-white">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-[1048px]">
             <div class="text-left">
@@ -122,9 +122,9 @@
         const displayPost = (post) => {
             const postContainer = document.getElementById("postContainer");
             postContainer.innerHTML = `
-                <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
+                <div class="bg-white shadow-md rounded-lg p-5 border border-gray-200">
                     <h2 class="text-lg font-semibold text-gray-800 mb-2">Post ID: ${post.id}</h2>
-                    <h3 class="text-xl font-bold text-blue-600 mb-4">${post.title}</h3>
+                    <h3 class="text-xl font-bold mb-4">${post.title}</h3>
                     <p class="text-gray-700">${post.body}</p>
                 </div>`;
         };
