@@ -13,7 +13,7 @@
     </a>
 
     <div id="game-container" class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
-        <h1 class="text-2xl font-bold text-center mb-4">The Mysterious Cabin</h1>
+        <h1 id="title" class="text-2xl font-bold text-center mb-4">The Mysterious Cabin</h1>
         <p id="story" class="text-gray-700 mb-6">
             Kamu sedang terjebak badai salju dan menemukan kabin misterius di tengah hutan. 
             Apakah kamu akan masuk ke kabin atau mencari perlindungan di tempat lain?
@@ -28,6 +28,7 @@
         const bodyElement = document.getElementById("body");
         const storyElement = document.getElementById("story");
         const choicesElement = document.getElementById("choices");
+        const titleElement = document.getElementById("title");
 
         const storyData = {
             start: {
@@ -79,10 +80,21 @@
 
             if (nextStory.isBadEnding) {
                 bodyElement.classList.replace("bg-gray-200", "bg-black");
-                bodyElement.classList.replace("text-gray-800", "text-white");
+                bodyElement.classList.replace("text-gray-800", "text-black");
+                titleElement.textContent = "Bad Ending"; // Ganti judul menjadi Bad Ending
             }
 
-            if (nextStory.choices && nextStory.choices.length > 0) {
+            if (!nextStory.isBadEnding && nextStory.choices.length === 0) {
+                titleElement.textContent = "Congratulations 🎉";
+                choicesElement.innerHTML = `
+                    <button class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded flex items-center justify-center space-x-2" onclick="restart()">
+                        <span>Congratulations</span> 
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-trophy text-yellow-400"></i>
+                    </button>
+                `;
+            } else if (nextStory.choices && nextStory.choices.length > 0) {
+                // Pilihan baru
                 choicesElement.innerHTML = '';
                 nextStory.choices.forEach(choice => {
                     const button = document.createElement('button');
@@ -92,13 +104,14 @@
                     choicesElement.appendChild(button);
                 });
             } else {
-                choicesElement.innerHTML = '<button onclick="restart()" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Restart</button>';
+                choicesElement.innerHTML = '<button onclick="restart()" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Try Again</button>';
             }
         }
 
         function restart() {
             bodyElement.classList.replace("bg-black", "bg-gray-200");
             bodyElement.classList.replace("text-white", "text-gray-800");
+            titleElement.textContent = "The Mysterious Cabin"; // Kembalikan judul ke awal
             makeChoice("start");
         }
 
