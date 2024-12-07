@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dcefce9aca.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col ">
+    <header>
+        <div class="bg-gray-200 p-4">
+            <div class="flex justify-between items-center">        
+                <div class="lg:hidden">
+                    <button id="menu-toggle" class="text-blue-600">
+                        <i class="fas fa-bars bg"></i>
+                    </button>
+                </div>
+    
+                <ul class="hidden lg:flex justify-center gap-10 w-full max-w-6xl mx-auto">
+                    <li><a href="index.html" class="text-blue-600">Home</a></li>
+                    <li><a href="biodata.html" class="text-blue-600">Biodata</a></li>
+                    <li><a href="contact_us.html" class="text-blue-600">Contact Us</a></li>
+                    <li><a href="posts.html" class="text-blue-600">Post</a></li>
+                </ul>
+            </div>
+    
+            <ul id="mobile-menu" class="lg:hidden hidden flex-col items-center mt-4 space-y-4 bg-gray-200 w-full">
+                <li><a href="index.html" class="text-blue-600">Home</a></li>
+                <li><a href="biodata.html" class="text-blue-600">Biodata</a></li>
+                <li><a href="contact_us.html" class="text-blue-600">Contact Us</a></li>
+                <li><a href="posts.html" class="text-blue-600">Post</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center">
+        <div class="mx-auto p-4">
+            <h1 class="text-3xl font-bold text-center mb-6">Post Data Viewer</h1>
+            <div id="postContainer" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+    </main>
+
+    <footer class="bg-[#566d8f] p-8 text-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-[1048px]">
+            <div class="text-left">
+                <p class="italic">Disclaimer: <br> Kami hanya menyediakan informasi seputar Aplikasi JKN Mobile.</p>
+                <p class="italic">JKNMobile bukanlah official website.</p>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end space-y-4">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="px-4 py-3.5 bg-cyan-500 text-white hover:bg-cyan-600"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+
+                <ul class="flex space-x-6 pt-10">
+                    <li><a href="https://fti.unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">FTI UNAI</a></li>
+                    <li><a href="https://unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">UNAI</a></li>
+                    <li><a href="https://jurnal.unai.edu/index.php/teika" target="_blank" class="text-teal-500 hover:text-white transition duration-300">Jurnal TEIKA</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-400 my-6 w-3/5 mx-auto"></div>
+
+        <div class="text-center mt-4">
+            <a href="https://jknmobile.com" class="text-teal-500 font-semibold hover:text-teal-600">JKNMOBILE.COM</a>
+        </div>
+    </footer>
+</body>
+</html>
