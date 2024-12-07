@@ -73,5 +73,38 @@
             <a href="https://jknmobile.com" class="text-teal-500 font-semibold hover:text-teal-600">JKNMOBILE.COM</a>
         </div>
     </footer>
+
+    <script>
+        const NIM = "2381061";
+        const lastTwoDigits = NIM.slice(-2);
+        const url = `https://jsonplaceholder.typicode.com/posts/${61}`;
+
+        const fetchPost = async () => {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error("Failed to fetch data");
+
+                const post = await response.json();
+                displayPost(post);
+            } catch (error) {
+                document.getElementById("postContainer").innerHTML = `
+                    <div class="text-red-500 text-center col-span-full">
+                        Error: ${error.message}
+                    </div>`;
+            }
+        };
+
+        const displayPost = (post) => {
+            const postContainer = document.getElementById("postContainer");
+            postContainer.innerHTML = `
+                <div class="bg-white shadow-md rounded-lg p-6 border border-gray-200">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Post ID: ${post.id}</h2>
+                    <h3 class="text-xl font-bold text-blue-600 mb-4">${post.title}</h3>
+                    <p class="text-gray-700">${post.body}</p>
+                </div>`;
+        };
+
+        fetchPost();
+    </script>
 </body>
 </html>
