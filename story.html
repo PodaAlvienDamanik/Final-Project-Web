@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perjalanan Narnia dan Moana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/dcefce9aca.js" crossorigin="anonymous"></script>
+    <style>
+        body.light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        footer.light-mode-footer {
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        footer.dark-mode-footer {
+            background-color: white;
+            color: black;
+        }
+
+        .center-btn {
+            position: absolute;
+            top: 4%;
+            right: 4%;
+            font-size: 2rem;
+            background: transparent;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .exit-btn {
+            position: absolute;
+            top: 4%;
+            left: 4%;
+            font-size: 2rem;
+            background: transparent;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="light-mode transition-colors duration-300">
+
+    <button id="exitButton" class="exit-btn">
+        <i class="fas fa-sign-out-alt"></i>
+    </button>
+
+    <button id="toggleTheme" class="center-btn">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-6">Perjalanan Narnia dan Moana</h1>
+
+        <section id="narniaStory" class="story-text mb-6">
+            <h2 class="text-3xl font-semibold mb-4">Bab 1: Masuk ke Dunia Narnia</h2>
+            <p>Pada suatu hari yang dingin, <strong>Lucy</strong>, seorang gadis kecil, menemukan sebuah lemari tua yang tak biasa di rumah teman keluarganya. Tanpa diduga, lemari itu membawanya ke dunia yang penuh keajaiban—<strong>Narnia</strong>.</p>
+
+            <p>Di Narnia, Lucy bertemu dengan berbagai makhluk aneh, seperti faun, penyihir, dan hewan-hewan berbicara. Dunia ini sangat berbeda dari dunia nyata, seperti halaman web yang membawa pengunjung ke tempat yang penuh petualangan dan keajaiban.</p>
+
+            <p>Lucy tidak tahu apa yang akan terjadi selanjutnya, namun dia merasa dunia Narnia penuh dengan rahasia yang menunggu untuk ditemukan. Seperti menjelajahi sebuah website, setiap klik membuka pintu baru yang penuh kejutan dan misteri.</p>
+            <p>To Be Continue...</p>
+        </section>
+
+        <section id="moanaStory" class="story-text mb-6 hidden">
+            <h2 class="text-3xl font-semibold mb-4">Bab 1: Moana dan Lautan yang Penuh Petualangan</h2>
+            <p><strong>Moana</strong>, seorang gadis muda dari sebuah pulau tropis, selalu merindukan petualangan dan ingin mengeksplorasi dunia luar. Meskipun ayahnya melarangnya untuk berlayar ke luar laut, Moana merasa bahwa panggilan laut adalah takdirnya.</p>
+
+            <p>Suatu hari, ketika pulau mereka menghadapi krisis kelaparan akibat terumbu karang yang rusak, Moana akhirnya memutuskan untuk berlayar. Dengan bantuan Maui, dewa setengah manusia yang nakal, Moana memulai petualangan besar untuk menyelamatkan rumahnya dan mengembalikan kehidupan laut.</p>
+
+            <p>Petualangan ini mengajarkan Moana tentang keberanian, tanggung jawab, dan kepercayaan diri dalam menghadapi tantangan besar.</p>
+            <p>To Be Continue...</p>
+        </section>
+
+        <footer id="footer" class="light-mode-footer p-4 mt-8">
+            <p class="text-center">Terima kasih telah mengikuti perjalanan ini! Pilih mode yang sesuai dengan suasana hati kamu.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const toggleThemeButton = document.getElementById('toggleTheme');
+        const body = document.body;
+        const exitButton = document.getElementById('exitButton');
+        const footer = document.getElementById('footer');
+        const narniaStory = document.getElementById('narniaStory');
+        const moanaStory = document.getElementById('moanaStory');
+
+        toggleThemeButton.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                toggleThemeButton.innerHTML = '<i class="fas fa-moon"></i>';
+                footer.classList.remove('light-mode-footer');
+                footer.classList.add('dark-mode-footer');
+                // Show Moana story in dark mode
+                narniaStory.classList.add('hidden');
+                moanaStory.classList.remove('hidden');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                toggleThemeButton.innerHTML = '<i class="fas fa-sun"></i>';
+                footer.classList.remove('dark-mode-footer');
+                footer.classList.add('light-mode-footer');
+                moanaStory.classList.add('hidden');
+                narniaStory.classList.remove('hidden');
+            }
+        });
+
+        exitButton.addEventListener('click', () => {
+            window.location.href = "freepage.html";
+        });
+    </script>
+</body>
+</html>
