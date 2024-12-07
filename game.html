@@ -81,7 +81,7 @@
             if (nextStory.isBadEnding) {
                 bodyElement.classList.replace("bg-gray-200", "bg-black");
                 bodyElement.classList.replace("text-gray-800", "text-black");
-                titleElement.textContent = "Bad Ending"; // Ganti judul menjadi Bad Ending
+                titleElement.textContent = "Bad Ending";
             }
 
             if (!nextStory.isBadEnding && nextStory.choices.length === 0) {
@@ -94,7 +94,6 @@
                     </button>
                 `;
             } else if (nextStory.choices && nextStory.choices.length > 0) {
-                // Pilihan baru
                 choicesElement.innerHTML = '';
                 nextStory.choices.forEach(choice => {
                     const button = document.createElement('button');
@@ -111,7 +110,7 @@
         function restart() {
             bodyElement.classList.replace("bg-black", "bg-gray-200");
             bodyElement.classList.replace("text-white", "text-gray-800");
-            titleElement.textContent = "The Mysterious Cabin"; // Kembalikan judul ke awal
+            titleElement.textContent = "The Mysterious Cabin";
             makeChoice("start");
         }
 
