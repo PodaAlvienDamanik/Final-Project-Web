@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mysterious Cabin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/dcefce9aca.js" crossorigin="anonymous"></script>
+</head>
+<body id="body" class="bg-gray-200 text-gray-800 flex items-center justify-center min-h-screen relative">
+    <a href="freepage.html" class="absolute top-4 left-4 bg-gray-100 hover:bg-gray-300 text-gray-700 p-3 rounded-full shadow-md">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div id="game-container" class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold text-center mb-4">The Mysterious Cabin</h1>
+        <p id="story" class="text-gray-700 mb-6">
+            Kamu sedang terjebak badai salju dan menemukan kabin misterius di tengah hutan. 
+            Apakah kamu akan masuk ke kabin atau mencari perlindungan di tempat lain?
+        </p>
+        <div id="choices" class="flex flex-col space-y-4">
+            <button onclick="makeChoice('enter')" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Masuk ke kabin</button>
+            <button onclick="makeChoice('search')" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Cari tempat lain</button>
+        </div>
+    </div>
+
+    <script>
+        const bodyElement = document.getElementById("body");
+        const storyElement = document.getElementById("story");
+        const choicesElement = document.getElementById("choices");
+
+        const storyData = {
+            start: {
+                text: "Kamu sedang terjebak badai salju dan menemukan kabin misterius di tengah hutan. Apakah kamu akan masuk ke kabin atau mencari perlindungan di tempat lain?",
+                choices: [
+                    { text: "Masuk ke kabin", next: "enter" },
+                    { text: "Cari tempat lain", next: "search" }
+                ]
+            },
+            enter: {
+                text: "Kamu masuk ke kabin dan menemukan perapian yang menyala. Ada dua pintu di dalam kabin: satu menuju ruang bawah tanah, dan satu lagi menuju lantai atas. Ke mana kamu akan pergi?",
+                choices: [
+                    { text: "Pergi ke ruang bawah tanah", next: "basement" },
+                    { text: "Pergi ke lantai atas", next: "upstairs" }
+                ]
+            },
+            search: {
+                text: "Kamu memutuskan untuk mencari tempat lain, tetapi badai semakin ganas. Kamu menemukan gua yang terlihat aman, tetapi mendengar suara gemuruh dari dalam. Apakah kamu akan masuk atau tetap di luar?",
+                choices: [
+                    { text: "Masuk ke gua", next: "cave" },
+                    { text: "Tetap di luar", next: "outside" }
+                ]
+            },
+            basement: {
+                text: "Di ruang bawah tanah, kamu menemukan sebuah peti. Saat kamu membukanya, seekor makhluk aneh muncul dan menyerangmu! Kamu tidak berhasil keluar dari kabin. [ENDING: Diburu Makhluk Bawah Tanah]",
+                isBadEnding: true,
+                choices: []
+            },
+            upstairs: {
+                text: "Di lantai atas, kamu menemukan sebuah buku harian yang menceritakan bahwa kabin ini adalah perangkap. Tiba-tiba pintu terkunci, dan kamu tidak bisa keluar. [ENDING: Terjebak Selamanya]",
+                isBadEnding: true,
+                choices: []
+            },
+            cave: {
+                text: "Di dalam gua, kamu menemukan sekelompok orang yang juga terjebak badai. Mereka membantumu bertahan hidup hingga badai reda. [ENDING: Selamat Bersama Orang Asing]",
+                isBadEnding: false,
+                choices: []
+            },
+            outside: {
+                text: "Kamu tetap di luar dan mencoba bertahan. Sayangnya, suhu dingin terlalu ekstrem, dan kamu tidak bisa bertahan. [ENDING: Mati Membeku]",
+                isBadEnding: true,
+                choices: []
+            }
+        };
+
+        function makeChoice(choice) {
+            const nextStory = storyData[choice];
+            storyElement.textContent = nextStory.text;
+
+            if (nextStory.isBadEnding) {
+                bodyElement.classList.replace("bg-gray-200", "bg-black");
+                bodyElement.classList.replace("text-gray-800", "text-white");
+            }
+
+            if (nextStory.choices && nextStory.choices.length > 0) {
+                choicesElement.innerHTML = '';
+                nextStory.choices.forEach(choice => {
+                    const button = document.createElement('button');
+                    button.textContent = choice.text;
+                    button.className = "bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded";
+                    button.onclick = () => makeChoice(choice.next);
+                    choicesElement.appendChild(button);
+                });
+            } else {
+                choicesElement.innerHTML = '<button onclick="restart()" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Restart</button>';
+            }
+        }
+
+        function restart() {
+            bodyElement.classList.replace("bg-black", "bg-gray-200");
+            bodyElement.classList.replace("text-white", "text-gray-800");
+            makeChoice("start");
+        }
+
+        makeChoice("start");
+    </script>
+</body>
+</html>
