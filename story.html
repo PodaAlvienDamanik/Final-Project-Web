@@ -28,7 +28,7 @@
         }
 
         .center-btn, .exit-btn {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             background: transparent;
             border: none;
             color: inherit;
@@ -47,15 +47,24 @@
             top: 1rem;
             left: 1rem;
         }
+
+        @media (max-width: 640px) {
+            .center-btn, .exit-btn {
+                font-size: 1rem; 
+                top: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body class="light-mode transition-colors duration-300">
 
-    <button id="exitButton" class="exit-btn sm:top-4 sm:left-6 text-lg sm:text-2xl">
+    <button id="exitButton" 
+            class="exit-btn absolute top-4 left-4 sm:top-4 sm:left-6 text-base sm:text-lg md:text-xl hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-500">
         <i class="fas fa-sign-out-alt"></i>
     </button>
 
-    <button id="toggleTheme" class="center-btn sm:top-4 sm:right-6 text-lg sm:text-2xl">
+    <button id="toggleTheme" 
+            class="center-btn absolute top-4 right-4 sm:top-4 sm:right-6 text-base sm:text-lg md:text-xl hover:text-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500">
         <i class="fas fa-sun"></i>
     </button>
 
@@ -97,7 +106,6 @@
         <footer id="footer" class="light-mode-footer p-3 sm:p-4 md:p-6 mt-4 sm:mt-8">
             <p class="text-center text-sm sm:text-base">Terima kasih telah mengikuti perjalanan ini! Pilih mode yang sesuai dengan suasana hati kamu.</p>
         </footer>
-
     </div>
 
     <script>
