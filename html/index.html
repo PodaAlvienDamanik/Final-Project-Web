@@ -1,0 +1,350 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" href="img/logo jkn.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://kit.fontawesome.com/dcefce9aca.js" crossorigin="anonymous"></script>
+        <title>JKN Mobile</title>
+    </head>
+    <body class="bg-white flex flex-col min-h-screen  font-['Montserrat']">
+        <header>
+            <div class="bg-gray-200 p-4">
+                <div class="flex justify-between items-center">        
+                    <div class="lg:hidden">
+                        <button id="menu-toggle" class="text-black">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+        
+                    <ul class="hidden lg:flex justify-center gap-10 w-full max-w-6xl mx-auto">
+                        <li><a href="/html/index.html" class="text-black hover:text-blue-600 transition duration-300">Home</a></li>
+                        <li><a href="/html/biodata.html" class="text-black hover:text-blue-600 transition duration-300">Biodata</a></li>
+                        <li><a href="/html/contact_us.html" class="text-black hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                        <li><a href="/html/posts.html" class="text-black hover:text-blue-600 transition duration-300">Post</a></li>
+                        <li><a href="/html/freepage.html" class="text-black hover:text-blue-600 transition duration-300">Resource</a></li>
+                    </ul>
+                </div>
+        
+                <ul id="mobile-menu" class="lg:hidden hidden flex-col items-center mt-4 space-y-4 bg-gray-200 w-full">
+                    <li><a href="/html/index.html" class="text-black hover:text-blue-600 transition duration-300">Home</a></li>
+                    <li><a href="/html/biodata.html" class="text-black hover:text-blue-600 transition duration-300">Biodata</a></li>
+                    <li><a href="/html/contact_us.html" class="text-black hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                    <li><a href="/html/posts.html" class="text-black hover:text-blue-600 transition duration-300">Post</a></li>
+                    <li><a href="/html/freepage.html" class="text-black hover:text-blue-600 transition duration-300">Resource</a></li>
+                </ul>
+            </div>
+        </header>
+
+    <div class="flex-grow">
+        <section class="flex flex-col items-center p-10 text-center">
+            <img src="img/logo jkn.png" alt="JKN Mobile Logo" class="w-[200px] mb-5">
+            <h1 class="text-[60px] mb-5">APLIKASI JKN MOBILE</h1>
+            <p class="text-[25px] mb-5">Akses Kesehatan Anda dengan Mudah dan Cepat.<br>Unduh JKN Mobile sekarang juga, pilih aplikasi <br> sesuai tipe handphone Anda</p>
+            <div class="flex">
+                <a href="#" class="bg-teal-500 text-white py-4 px-8 uppercase font-bold mr-5 transition duration-300 ease-in-out hover:bg-teal-600">Android</a>
+                <a href="#" class="border-2 border-teal-500 text-teal-500 py-4 px-8 uppercase font-bold transition duration-300 ease-in-out hover:bg-teal-500 hover:text-white">Iphone</a>
+            </div>
+        </section>
+
+        <section class="bg-gray-100 py-10 font-['Montserrat']">
+            <h1 class="text-[50px] text-center mb-5">APLIKASI BPJS KESEHATAN</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-[1048px] mx-auto p-8">
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700 leading-loose">BPJS Kesehatan</h2>
+                    <p class="text-gray-600 mb-6">Portal Informasi Data <br> BPJS Kesehatan</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>
+
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700 leading-loose">E CLAIM BPJS</h2>
+                    <p class="text-gray-600 mb-6">Aplikasi untuk Klaim BPJS Kesehatan secara online</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>
+
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700 leading-loose">V CLAIM BPJS</h2>
+                    <p class="text-gray-600 mb-6">Aplikasi untuk membuat SEP oleh Rumah Sakit</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>
+
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700 leading-loose">P CARE BPJS</h2>
+                    <p class="text-gray-600 mb-12">Aplikasi untuk Klaim Primary Care BPJS Kesehatan</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>  
+
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700 leading-loose">HFIS BPJS</h2>
+                    <p class="text-gray-600 mb-6">Sistem Informasi Manajemen Data Fasilitas Kesehatan BPJS Kesehatan</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>
+
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700 leading-loose">SKRINING BPJS</h2>
+                    <p class="text-gray-600 mb-6">Aplikasi Web Skrining Riwayat Kesehatan Peserta BPJS Kesehatan</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>
+
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700 leading-loose">SIPP BPJS</h2>
+                    <p class="text-gray-600 mb-6">Aplikasi Saluran Informasi Penanganan Pengaduan BPJS Kesehatan</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>
+
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700 leading-loose">ANTREAN FASKES</h2>
+                    <p class="text-gray-600 mb-6">Aplikasi untuk mendaftar antrean Faskes BPJS secara online</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>
+
+                <div class="bg-white shadow-lg p-8 text-center transition-transform duration-300 hover:scale-105 py-20">
+                    <img src="img/bpjs.png" alt="BPJS Kesehatan" class="w-20 mx-auto mb-4">
+                    <h2 class="text-2xl text-gray-700">ANTREAN RS</h2>
+                    <p class="text-gray-600 mb-10">Aplikasi untuk mendaftar antrean RS BPJS Kesehatan secara online</p>
+                    <button class="bg-transparent border-2 border-teal-500 text-teal-500 py-2 px-20 transition duration-300 hover:bg-teal-500 hover:text-white">Login</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 text-xl font-['Montserrat']">
+            <div class="max-w-[1048px] mx-auto px-4">
+                <h2 class="text-5xl mb-5 text-center text-3xl sm:text-4xl md:text-5xl">JKN MOBILE</h2>
+                <p class="text-2xl mb-5 text-center text-lg sm:text-xl">Solusi Kesehatan Digital di Ujung Jari Anda</p> 
+                <br><br>
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl">Dalam era digital ini, hampir semua aspek kehidupan kita telah dipermudah dengan adanya teknologi. Termasuk dalam hal akses informasi dan layanan kesehatan. Salah satu inovasi dalam bidang ini adalah aplikasi JKN Mobile dari BPJS Kesehatan.</p>
+                
+                <h2 class="text-3xl mb-5 text-center text-2xl sm:text-3xl md:text-4xl">Apa Itu JKN Mobile?</h2>
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl"><b>JKN Mobile</b> adalah aplikasi mobile yang dikembangkan oleh BPJS Kesehatan untuk memudahkan peserta dalam mengakses berbagai layanan kesehatannya. Dengan aplikasi ini, peserta dapat melakukan cek status kepesertaan, mencari rumah sakit terdekat, hingga melakukan pendaftaran online.</p>
+                
+                <h2 class="text-3xl mb-5 text-center text-2xl sm:text-3xl md:text-4xl">Sejarah JKN Mobile</h2>
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl">JKN Mobile adalah aplikasi mobile yang diluncurkan oleh Badan Penyelenggara Jaminan Sosial (BPJS) Kesehatan Indonesia. Aplikasi ini merupakan bagian dari inisiatif BPJS Kesehatan untuk memperluas akses dan meningkatkan kualitas layanan kepada peserta Jaminan Kesehatan Nasional (JKN).</p>
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl">Peluncuran JKN Mobile menandai titik penting dalam sejarah layanan kesehatan di Indonesia, dengan tujuan utama untuk mengoptimalkan pelayanan dan mempermudah proses administratif bagi peserta. Sejak diluncurkan, aplikasi ini telah mendapatkan respon positif dari masyarakat dan terus berkembang dengan penambahan fitur-fitur baru untuk memenuhi kebutuhan peserta.</p>
+                
+                <h2 class="text-4xl mb-5 text-center text-3xl sm:text-4xl md:text-5xl">VISI JKN Mobile</h2>
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl"><b>VISI JKN Mobile</b><br>Visi dari JKN Mobile adalah menjadi platform digital utama dalam menyediakan akses informasi dan layanan kesehatan bagi seluruh peserta BPJS Kesehatan. Dengan teknologi digital, diharapkan mampu memberikan pelayanan yang lebih cepat, mudah, dan efisien.</p>
+                
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl"><b>Misi JKN Mobile</b><br>Memfasilitasi akses informasi tentang program jaminan kesehatannya kepada semua peserta secara real-time. Meningkatkan efisiensi proses administratif melalui sistem online, seperti pengajuan klaim, pembayaran iuran, sampai pencarian fasilitas kesehatannya. Menyediakan saluran komunikasi yang efektif antara peserta dengan BPJS Kesehatan. Melalui visi dan misinya tersebut, JKN Mobile berkomitmen untuk membantu transformasi digital dalam sektor kesehatan di Indonesia. Dengan demikian dapat menciptakan sistem jaminan kesehatannya yang lebih inklusif dan berkelanjutan bagi seluruh masyarakat.</p>
+                
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl">Melalui visi dan misinya tersebut, JKN Mobile berkomitmen untuk membantu transformasi digital dalam sektor kesehatan di Indonesia. Dengan demikian dapat menciptakan sistem jaminan kesehatannya yang lebih inklusif dan berkelanjutan bagi seluruh masyarakat.</p><br>
+                
+                <h2 class="text-3xl mb-5 text-center text-2xl sm:text-3xl md:text-4xl">Fitur Unggulan Aplikasi JKN Mobile</h2><br>
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl"><b>Aplikasi JKN Mobile</b> menawarkan berbagai fitur yang dirancang untuk memudahkan pengguna: <br>Cek Status Kepesertaan: Peserta dapat memeriksa status kepesertaannya langsung dari aplikasi. <br>Pencarian Rumah Sakit: Fitur pencarian rumah sakit membantu peserta menemukan fasilitas kesehatan terdekat. <br>Pendaftaran Online: Peserta dapat mendaftar secara online untuk mendapatkan layanan kesehatannya.</p><br>
+                
+                <h2 class="text-3xl mb-5 text-center text-2xl sm:text-3xl md:text-4xl">Keuntungan Menggunakan Aplikasi JKN Mobile</h2><br>
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl">Menggunakan aplikasi mobile untuk akses layanan kesehatan tentunya memberikan banyak kemudahan. Beberapa keuntungan menggunakan aplikasi <b>JKN Mobile</b> antara lain:</p>
+                
+                <h3 class="font-bold text-justify text-xl sm:text-lg md:text-xl">Kemudahan Akses</h3>
+                <p class="text-justify text-xl sm:text-lg md:text-xl">Dengan smartphone di tangan, Anda bisa mengakses berbagai informasi dan layanan kapan saja dan di mana saja.</p><br>
+                
+                <h3 class="font-bold text-justify text-xl sm:text-lg md:text-xl">Efisiensi Waktu</h3>
+                <p class="text-justify text-xl sm:text-lg md:text-xl">Tidak perlu lagi antri panjang atau datang langsung ke kantor BPJS atau rumah sakit hanya untuk cek status atau mendaftar layanan.</p><br>
+                
+                <h3 class="font-bold text-justify text-xl sm:text-lg md:text-xl">Informasi Real-Time</h3>
+                <p class="text-justify text-xl sm:text-lg md:text-xl">Semua data di aplikasi selalu diperbarui secara real-time sehingga Anda selalu mendapatkan informasi terkini.</p><br>
+                
+                <h2 class="text-3xl mb-5 text-center text-2xl sm:text-3xl md:text-4xl">Bagaimana Cara Mengunduh dan Menggunakan Aplikasinya?</h2>
+                <p class="mb-5 text-justify text-xl sm:text-lg md:text-xl">Anda bisa mengunduh aplikasinya secara gratis dari Google Play Store atau Apple App Store. Setelah itu, cukup daftarkan diri Anda dan ikuti petunjuk yang ada di dalamnya untuk mulai menggunakan semua fiturnya.</p>
+                
+                <a href="https://jknmobile.com/#cara_registrasi" class="text-teal-500 text-justify hover:text-teal-400">Baca Selengkapnya...</a>
+                
+                <h2 class="text-3xl mb-5 text-center text-2xl sm:text-3xl md:text-4xl">Kesimpulan</h2>
+                <p class="mb-5   text-justify text-xl sm:text-lg md:text-xl">JKN Mobile adalah solusi praktis bagi Anda yang ingin mengakses informasi dan layanan kesehatan dari BPJS Kesehatan dengan cepat dan mudah. Dengan menggunakan aplikasi ini, Anda bisa menghemat waktu, tenaga, dan mendapatkan informasi terkini. Jadi, tunggu apa lagi? Yuk, unduh JKN Mobile dan mulailah menikmati layanan kesehatan yang lebih baik dan efisien!</p>
+            </div>
+        </section>
+        
+
+        <section class="bg-gray-100 py-10 font-['Montserrat']">
+            <h2 class="text-[40px] text-center mb-8 text-bold text-4xl sm:text-5xl md:text-6xl">Info Grafis Aplikasi JKN Mobile</h2>
+            <img src="https://jknmobile.com/wp-content/uploads/2023/09/Infografis_Aplikasi_JKN_Mobile.webp" alt="Infor Grafis Aplikasi JKN Mobile" class="mx-auto max-w-full h-auto">
+        </section>
+
+        <section class="py-10 text-xl text-justify">
+            <div class="max-w-[1048px] mx-auto px-4">
+                <h2 class="text-4xl text-center mb-5 sm:text-3xl">UNDUH APLIKASI JKN MOBILE</h2>
+                <p class="text-justify mb-5">Dalam era digital ini, akses ke layanan kesehatan semakin mudah berkat adanya aplikasi JKN Mobile. Baik Anda pengguna Android atau iPhone, aplikasi ini dapat dengan mudah diunduh dan digunakan.</p><br>
+                
+                <h3 class="text-3xl text-center mb-5 sm:text-2xl">Cara Mengunduh Aplikasi JKN Mobile Untuk Pengguna Android</h3><br>
+                <p class="mb-5 text-justify">Jika Anda adalah pengguna Android dan ingin menggunakan aplikasi ini, berikut adalah panduan lengkap cara men-download dan menginstal Aplikasi JKN Mobile Bagi Pengguna Android.</p><br>
+                <p class="mb-5 text-justify"><b>Unduh Aplikasi JKN Mobile Android</b><br><br>Sebagai pengguna handphone Android, Anda dapat men-download aplikasi JKN Mobile secara langsung melalui tombol download di bawah ini, dan lanjutkan ke petunjuk Instalasi.</p><br>
+                <a href="https://prosoftpedia.com/download-aplikasi-jkn-mobile/" class="bg-[#08d8b2] p-3 text-justify text-center text-white hover:bg-teal-400">Download</a><br><br><br>
+
+                <h3 class="mt-5 font-bold sm:text-lg">Membuka Google Play Store</h3>
+                <p class="text-justify mb-5">Selain cara di atas, Anda juga bisa menemukan aplikasi JKN Mobile di Google Play Store. Ikon Google Play Store biasanya berada di layar utama atau di folder aplikasi ponsel Android Anda. Klik ikon tersebut untuk membuka Google Play Store.</p>
+
+                <h3 class="font-bold sm:text-lg">Mencari Aplikasi JKN Mobile</h3>
+                <p class="text-justify mb-5">Setelah masuk ke Google Play Store, Anda akan melihat kolom pencarian di bagian atas. Ketikkan "JKN Mobile" di kolom tersebut, lalu tekan tombol 'Enter' atau 'Search'.</p>
+
+                <h3 class="font-bold sm:text-lg">Mengunduh Aplikasi di Google Play Store</h3>
+                <p class="text-justify mb-5">Setelah hasil pencarian muncul, klik pada aplikasi yang dikembangkan oleh 'BPJS Kesehatan'. Anda akan melihat halaman detail aplikasi. Di halaman ini, klik tombol 'Install' atau 'Pasang' untuk mengunduh dan menginstal aplikasi.</p>
+
+                <h3 class="font-bold sm:text-lg">Menunggu Instalasi</h3>
+                <p class="text-justify mb-5">Setelah Anda menekan tombol 'Install', unduhan akan dimulai. Anda bisa melihat proses unduhan di bagian notifikasi ponsel. Proses ini mungkin memerlukan waktu beberapa menit, tergantung pada koneksi internet Anda.</p>
+
+                <h3 class="font-bold sm:text-lg">Membuka Aplikasi</h3>
+                <p class="text-justify mb-5">Setelah aplikasi berhasil terinstal, tombol 'Install' akan berubah menjadi 'Open' atau 'Buka'. Anda bisa klik tombol tersebut untuk membuka aplikasi JKN Mobile.</p>
+
+                <h3 class="font-bold sm:text-lg">Registrasi / Masuk</h3>
+                <p class="mb-5 text-justify">Setelah aplikasi terbuka, Anda akan diminta untuk mendaftar atau masuk. Jika Anda sudah terdaftar sebagai peserta BPJS Kesehatan, masukkan Nomor Kartu BPJS Kesehatan atau NIK dan kata sandi Anda. Jika Anda belum terdaftar, silahkan klik link di bawah dan ikuti petunjuknya.</p>
+                <a href="https://jknmobile.com/#cara_registrasi" class="text-teal-500">Cara Daftar Aplikasi JKN Mobile</a>
+
+                <h3 class="mt-10 mb-5 font-bold sm:text-lg">Menggunakan Aplikasi</h3>
+                <p class="mb-8 text-justify">Setelah berhasil masuk, sekarang Anda bisa mulai menggunakan aplikasi JKN Mobile untuk memeriksa saldo, mengecek antrian, dan lainnya.</p>
+                
+                <h3 class="text-3xl text-center mb-5 sm:text-2xl">Cara Mengunduh Aplikasi JKN Mobile Untuk Pengguna iOS</h3><br>
+                <p class="mb-5 text-justify">Bagi Anda pengguna iPhone, Anda dapat mengunduh aplikasi JKN Mobile langsung melalui App Store. Berikut adalah cara untuk men-download dan menginstal aplikasi di perangkat iOS.</p><br>
+                <p class="mb-5 text-justify"><b>Unduh Aplikasi JKN Mobile iOS</b><br><br>Untuk perangkat iOS, buka aplikasi App Store di perangkat Anda dan cari 'JKN Mobile'. Kemudian klik unduh dan aplikasi akan terinstal di perangkat iPhone atau iPad Anda.</p><br>
+                <a href="https://apps.apple.com/id/app/jkn-mobile/id1372081149" class="bg-[#08d8b2] p-3 text-justify text-center text-white hover:bg-teal-400">Download</a>
+
+                <h3 class="text-3xl mt-10 mb-5 font-bold sm:text-2xl">Membuka App Store</h3>
+                <p class="mb-5">Aplikasi JKN Mobile juga bisa Anda temukan di Apple App Store. Ikon App Store biasanya berada di layar utama iPhone Anda. Klik ikon tersebut untuk membuka App Store.</p>
+
+                <h3 class="text-3xl mb-5 font-bold sm:text-2xl text-left">Mencari Aplikasi JKN Mobile</h3>
+                <p class="mb-5">Setelah masuk ke App Store, Anda akan melihat kolom pencarian di bagian bawah. Ketikkan "JKN Mobile" di kolom tersebut, lalu tekan tombol 'Search' atau 'Cari'.</p>
+
+                <h3 class="text-3xl mb-5 font-bold sm:text-2xl text-left">Mengunduh Aplikasi di App Store</h3>
+                <p class="mb-5">Setelah hasil pencarian muncul, klik pada aplikasi yang dikembangkan oleh 'BPJS Kesehatan'. Anda akan melihat halaman detail aplikasi. Di halaman ini, klik tombol 'Get' atau 'Unduh' untuk mengunduh dan menginstal aplikasi.</p>
+
+                <h3 class="text-3xl mb-5 font-bold">Menunggu Instalasi</h3>
+                <p class="mb-5">Setelah Anda menekan tombol 'Get', unduhan akan dimulai. Proses ini mungkin memerlukan waktu beberapa menit, tergantung pada koneksi internet Anda.</p>
+
+                <h3 class="text-3xl mb-5 font-bold">Membuka Aplikasi</h3>
+                <p class="mb-5">Setelah aplikasi berhasil terinstal, ikonnya akan muncul di layar utama iPhone Anda. Klik ikon tersebut untuk membuka aplikasi JKN Mobile.</p>
+
+                <h3 class="text-3xl mb-5 font-bold">Registrasi / Masuk</h3>
+                <p class="mb-5">Setelah aplikasi terbuka, Anda akan diminta untuk mendaftar atau masuk. Jika Anda sudah terdaftar sebagai peserta BPJS Kesehatan, masukkan Nomor Kartu BPJS Kesehatan atau NIK dan kata sandi Anda. Jika Anda belum terdaftar, ikuti petunjuk di bawah ini.</p>
+                <a href="https://jknmobile.com/#cara_registrasi" class="text-teal-500">Cara daftar Aplikasi JKN Mobile</a>
+
+                <h3 class="text-3xl mt-10 mb-5 font-bold">Menggunakan Aplikasi</h3>
+                <p class="mb-5">Setelah berhasil masuk, sekarang Anda bisa mulai menggunakan aplikasi JKN Mobile untuk memeriksa saldo, mengecek antrian dan lainnya.</p>
+                <p class="mb-5">Semoga panduan ini dapat membantu Anda dalam menggunakan Aplikasi JKN Mobile di perangkat iPhone! Selamat mencoba!</p>
+            </div>
+        </section>
+        
+
+        <section class="max-w-[1048px] mx-auto px-4 py-10 text-xl text-justify font-['Montserrat']">
+            <div class="max-w-[1048px] mx-auto px-4">
+                <h2 class="text-[30px] text-center pb-10">CARA REGISTRASI JKN MOBILE</h2>
+            </div>
+            <div class="max-w-[1048px] mx-auto ">
+                <p class="mb-5">
+                    Berikut adalah panduan lengkap langkah demi langkah untuk melakukan registrasi di aplikasi JKN Mobile. 
+                    Setelah Anda berhasil mengunduh dan meng-instal Aplikasi JKN Mobile dari BPJS Kesehatan, lanjutkan dengan langkah berikut:
+                </p>
+        
+                <h3 class="text-2xl mb-5 font-bold sm:text-2x1 text-left">Membuka Aplikasi dan Memulai Registrasi</h3>
+                <p class="mb-5">
+                    Setelah instalasi selesai, buka aplikasi JKN Mobile. Di halaman utama, klik tombol <strong>"Daftar"</strong> 
+                    yang biasanya berada di bagian bawah layar.
+                </p>
+        
+                <h3 class="text-3xl mb-5 font-bold sm:text-2xl text-left">Mengisi Formulir Pendaftaran</h3>
+                <p class="mb-5">
+                    Anda akan diminta untuk mengisi formulir pendaftaran dengan informasi pribadi seperti nama lengkap, 
+                    nomor Kartu Tanda Penduduk (KTP), alamat email, dan nomor telepon. Buat kata sandi yang kuat dan aman 
+                    sebagai proteksi akun Anda nanti. Pastikan semua informasi yang dimasukkan sudah benar sebelum melanjutkan 
+                    ke langkah berikutnya.
+                </p>
+        
+                <h3 class="text-3xl mb-5 font-bold sm:text-2xl text-left">Menerima Kode Verifikasi</h3>
+                <p class="mb-5">
+                    Setelah menekan tombol <strong>"Daftar"</strong>, sistem akan mengirimkan kode verifikasi ke alamat email 
+                    atau nomor telepon yang telah Anda masukkan sebelumnya. Buka email atau pesan SMS tersebut, dan catat kode 
+                    verifikasi yang diberikan.
+                </p>
+        
+                <h3 class="text-3xl mb-5 font-bold sm:text-2xl text-left">Memasukkan Kode Verifikasi</h3>
+                <p class="mb-5">
+                    Kembali ke aplikasi JKN Mobile, masukkan kode verifikasi tersebut pada kolom yang disediakan. Tekan tombol 
+                    <strong>"Verifikasi"</strong> untuk melanjutkan proses pendaftaran. Setelah berhasil melakukan verifikasi, 
+                    proses registrasi selesai! Selanjutnya Anda bisa langsung login menggunakan akun baru untuk mulai menggunakan 
+                    layanan dalam aplikasi ini.
+                </p>
+        
+                <p class="mb-20">
+                    <em>Ingatlah selalu untuk menjaga kerahasiaan data pribadi Anda, termasuk username dan password akun aplikasi ini.</em>
+                </p>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer class="bg-[#566d8f] p-8 text-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-[1048px]">
+            <div class="text-left">
+                <p class="italic">Disclaimer: <br> Kami hanya menyediakan informasi seputar Aplikasi JKN Mobile.</p>
+                <p class="italic">JKNMobile bukanlah official website.</p>
+            </div>
+    
+            <div class="flex flex-col items-center md:items-end space-y-4">
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="#" class="px-4 py-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+    
+                <ul class="flex space-x-6 pt-10">
+                    <li>
+                        <a href="https://fti.unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            FTI UNAI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            UNAI
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="border-t border-gray-400 my-6 w-3/5 mx-auto"></div>
+    
+        <div class="text-center mt-4">
+            <a href="https://jknmobile.com" class="text-teal-500 font-semibold hover:text-teal-600">
+                JKNMOBILE.COM
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    
+    </body>
+    </html>

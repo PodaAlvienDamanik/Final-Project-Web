@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/venelop.jpeg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dcefce9aca.js" crossorigin="anonymous"></script>   
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header>
+        <div class="bg-gray-200 p-4">
+            <div class="flex justify-between items-center">        
+                <div class="lg:hidden">
+                    <button id="menu-toggle" class="text-black">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+    
+                <ul class="hidden lg:flex justify-center gap-10 w-full max-w-6xl mx-auto">
+                    <li><a href="/html/index.html" class="text-black hover:text-blue-600 transition duration-300">Home</a></li>
+                    <li><a href="/html/biodata.html" class="text-black hover:text-blue-600 transition duration-300">Biodata</a></li>
+                    <li><a href="/html/contact_us.html" class="text-black hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                    <li><a href="/html/posts.html" class="text-black hover:text-blue-600 transition duration-300">Post</a></li>
+                    <li><a href="/html/freepage.html" class="text-black hover:text-blue-600 transition duration-300">Resource</a></li>
+                </ul>
+            </div>
+    
+            <ul id="mobile-menu" class="lg:hidden hidden flex-col items-center mt-4 space-y-4 bg-gray-200 w-full">
+                <li><a href="/html/index.html" class="text-black hover:text-blue-600 transition duration-300">Home</a></li>
+                <li><a href="/html/biodata.html" class="text-black hover:text-blue-600 transition duration-300">Biodata</a></li>
+                <li><a href="/html/contact_us.html" class="text-black hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                <li><a href="/html/posts.html" class="text-black hover:text-blue-600 transition duration-300">Post</a></li>
+                <li><a href="/html/freepage.html" class="text-black hover:text-blue-600 transition duration-300">Resource</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="flex-grow p-6">
+        <section class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-8 text-gray-800">Resource And Project Page</h1>
+
+            <div class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6">Project Gallery</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <a href="/html/web1.html"><img src="img/web icon.jpg" alt="Project 1" class="w-full h-60 object-cover"></a>
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-700">Project 1</h3>
+                            <p class="font-bold">Black and White Simple Portofolio Web</p>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <a href="/html/story.html"><img src="img/sky.jpeg" alt="Project 2" class="w-full h-60 object-cover"></a>
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-700">Project 2</h3>
+                            <p class="font-bold">Raw story web</p>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <a href="/html/story.html"><img src="img/game.jpg" alt="Project 3" class="w-full h-60 object-cover"></a>
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-700">Project 3</h3>
+                            <p class="font-bold">Simple Story Game</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6">Reference Video</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="aspect-video">
+                        <iframe src="https://www.youtube.com/embed/z3slaXqmkT0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg w-full h-full"></iframe>
+                    </div>
+                    <div class="aspect-video">
+                        <iframe src="https://www.youtube.com/embed/GxDpZ3VSQfs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg w-full h-full"></iframe>
+                    </div>
+                    <div class="aspect-video">
+                        <iframe src="https://www.youtube.com/embed/3Kc0NoAcqgI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg w-full h-full"></iframe>
+                    </div>
+                </div>
+            </section>
+            
+
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold mb-6">My Location</h2>
+                <div class="w-full h-96">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.741559575622!2d107.57734217492256!3d-6.801263193196131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e18158298045%3A0xa2eeef1be5567272!2sUNAI%20-%20New%20Academic%20Building!5e0!3m2!1sid!2sid!4v1725727278522!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="bg-[#566d8f] p-8 text-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-[1048px]">
+            <div class="text-left">
+                <p class="italic">Disclaimer: <br> Kami hanya menyediakan informasi seputar Aplikasi JKN Mobile.</p>
+                <p class="italic">JKNMobile bukanlah official website.</p>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end space-y-4">
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="#" class="px-4 py-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="flex space-x-6 pt-10">
+                    <li>
+                        <a href="https://fti.unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            FTI UNAI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            UNAI
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-400 my-6 w-3/5 mx-auto"></div>
+
+        <div class="text-center mt-4">
+            <a href="https://jknmobile.com" class="text-teal-500 font-semibold hover:text-teal-600">
+                JKNMOBILE.COM
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

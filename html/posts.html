@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/venelop.jpeg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dcefce9aca.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col ">
+    <<header>
+        <div class="bg-gray-200 p-4">
+            <div class="flex justify-between items-center">        
+                <div class="lg:hidden">
+                    <button id="menu-toggle" class="text-black">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+    
+                <ul class="hidden lg:flex justify-center gap-10 w-full max-w-6xl mx-auto">
+                    <li><a href="/html/index.html" class="text-black hover:text-blue-600 transition duration-300">Home</a></li>
+                    <li><a href="/html/biodata.html" class="text-black hover:text-blue-600 transition duration-300">Biodata</a></li>
+                    <li><a href="/html/contact_us.html" class="text-black hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                    <li><a href="/html/posts.html" class="text-black hover:text-blue-600 transition duration-300">Post</a></li>
+                    <li><a href="/html/freepage.html" class="text-black hover:text-blue-600 transition duration-300">Resource</a></li>
+                </ul>
+            </div>
+    
+            <ul id="mobile-menu" class="lg:hidden hidden flex-col items-center mt-4 space-y-4 bg-gray-200 w-full">
+                <li><a href="/html/index.html" class="text-black hover:text-blue-600 transition duration-300">Home</a></li>
+                <li><a href="/html/biodata.html" class="text-black hover:text-blue-600 transition duration-300">Biodata</a></li>
+                <li><a href="/html/contact_us.html" class="text-black hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                <li><a href="/html/posts.html" class="text-black hover:text-blue-600 transition duration-300">Post</a></li>
+                <li><a href="/html/freepage.html" class="text-black hover:text-blue-600 transition duration-300">Resource</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center bg-gray-100">
+        <div class="mx-auto p-4 max-w-2xl bg-white rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-center mb-6">Post Data</h1>
+            <div id="postContainer" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1"></div>
+        </div>
+    </main>
+    
+    <footer class="bg-[#566d8f] p-8 text-white">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-[1048px]">
+            <div class="text-left">
+                <p class="italic">Disclaimer: <br> Kami hanya menyediakan informasi seputar Aplikasi JKN Mobile.</p>
+                <p class="italic">JKNMobile bukanlah official website.</p>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end space-y-4">
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="#" class="px-4 py-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-3.5 bg-cyan-500 text-white hover:bg-cyan-600">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="flex space-x-6 pt-10">
+                    <li>
+                        <a href="https://fti.unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            FTI UNAI
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://unai.edu/" target="_blank" class="text-teal-500 hover:text-white transition duration-300">
+                            UNAI
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-400 my-6 w-3/5 mx-auto"></div>
+
+        <div class="text-center mt-4">
+            <a href="https://jknmobile.com" class="text-teal-500 font-semibold hover:text-teal-600">
+                JKNMOBILE.COM
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const NIM = "2381061";
+        const lastTwoDigits = NIM.slice(-2);
+        const url = `https://jsonplaceholder.typicode.com/posts/${61}`;
+
+        const fetchPost = async () => {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error("Failed to fetch data");
+
+                const post = await response.json();
+                displayPost(post);
+            } catch (error) {
+                document.getElementById("postContainer").innerHTML = `
+                    <div class="text-red-500 text-center col-span-full">
+                        Error: ${error.message}
+                    </div>`;
+            }
+        };
+
+        const displayPost = (post) => {
+            const postContainer = document.getElementById("postContainer");
+            postContainer.innerHTML = `
+                <div class="bg-white shadow-md rounded-lg p-5 border border-gray-200">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Post ID: ${post.id}</h2>
+                    <h3 class="text-xl font-bold mb-4">${post.title}</h3>
+                    <p class="text-gray-700">${post.body}</p>
+                </div>`;
+        };
+
+        fetchPost();
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
