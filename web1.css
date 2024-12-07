@@ -46,7 +46,7 @@ nav .logo i {
 }
 
 nav .links {
-    height: 64px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -377,31 +377,75 @@ footer .socials a {
     }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav .links {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        border-radius: 8px;
+    }
+
+    nav .links a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .about .left h3 {
+        font-size: 18px;
+    }
+
     .about .left .info h2 {
-        font-size: 30px;
+        font-size: 22px;
     }
 
-    .about .left .info p,
-    .works .left .works-list .item .work-info p,
-    .works .left .works-list .item>p {
-        font-size: 16px;
-    }
-
-    .about .left .info .buttons button {
+    .about .left .info p {
         font-size: 14px;
     }
 
-    .works .left .works-list {
-        margin-top: 40px;
+    .about .left .info .buttons button {
+        font-size: 12px;
+        padding: 5px 8px;
     }
 
-    .works .let .works-list .item .work-info h5,
-    .works .right .item:not(:first-child) a {
-        font-size: 15px;
+    .about .right img {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
     }
 
-    .works .right .item:not(:first-child) p {
-        font-size: 13px;
+    .works .left h3 {
+        font-size: 20px;
+    }
+
+    .works .right {
+        grid-template-columns: 1fr;
+    }
+
+    .works .right .item:first-child {
+        grid-column: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    footer .socials {
+        flex-direction: column;
+        gap: 10px;
     }
 }
